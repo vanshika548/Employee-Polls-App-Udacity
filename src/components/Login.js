@@ -28,9 +28,6 @@ const Login = (props) => {
         <div>
             <h2 className="heading">Login Form</h2>
             <form>
-            <div className="imgcontainer">
-                <img src='../assets/images/avatar.png' alt="Avatar" className="avatar"/>
-            </div>
 
             <div className="container">
                 <select onChange={(e)=>selectUser(e.target.value)}>

@@ -26,7 +26,7 @@ const QuestionPanel = (props) => {
     
     return (
         <li className='d-row'>
-        <img src={avatar} className="image"/>
+        <img src={avatar} className="image" alt={avatar === null ? '' : `Avatar of ${name}`} />
         <div className='question-panel-info'>
             <div className='d-flex'>
                 <span><strong>{name}</strong> asks would you rather...</span>

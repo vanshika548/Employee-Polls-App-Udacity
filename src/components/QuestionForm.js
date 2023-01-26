@@ -32,16 +32,16 @@ const QuestionForm = (props) => {
         <div>
             <h1 className="questiionResult">QuestionForm</h1>
             <div className="ques-res">
-            <img src={questionObj.avatar} className='image'/>
+            <img src={questionObj.avatar} alt={questionObj.avatar === null ? '' : `Avatar of ${questionObj.authorName}`} className='image'/>
                 <h3 className="heading-h3">{props.authedUser} asks would you rather...</h3>
                 <div className="heading-h3">
                 <div>
                     <label>{questionObj.optionOne.text}</label> 
-                    <input onChange={handleSelectedValue} selectedvalue={optionSelected} type='radio' value='optionOne'/>
+                    <input onChange={handleSelectedValue} selectedvalue={optionSelected} type='radio' value='optionOne' name="radio-input"/>
                 </div>
                 <div>
                     <label>{questionObj.optionTwo.text}</label>
-                    <input onChange={handleSelectedValue} selectedvalue={optionSelected} type='radio' value='optionTwo'/>
+                    <input onChange={handleSelectedValue} selectedvalue={optionSelected} type='radio' value='optionTwo' name="radio-input"/>
                 </div>
                 </div>
                 <button type="submit" disabled={optionSelected === ''} onClick={(e) => handleSubmit(e)} className="submitbtn">Submit</button>
