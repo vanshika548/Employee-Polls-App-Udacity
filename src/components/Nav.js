@@ -7,9 +7,9 @@ const Nav = (props) => {
     return(
         <div className="disply-flex">
             <div className="link-div">
-                <NavLink to='/' className='link'>HOME</NavLink>
-                <NavLink to='/add' className='link'>ADD NEW QUESTION</NavLink>
-                <NavLink to='/leaderboard' className='link'>LEADERBOARD</NavLink>
+                <NavLink to='/' data-testid='nav-link' className='link'>HOME</NavLink>
+                <NavLink to='/add' data-testid='nav-link' className='link'>ADD NEW QUESTION</NavLink>
+                <NavLink to='/leaderboard' data-testid='nav-link' className='link'>LEADERBOARD</NavLink>
             </div>
             <div className="welcome-text">
                 <span>Welcome, <strong>{currentUser}</strong></span>
