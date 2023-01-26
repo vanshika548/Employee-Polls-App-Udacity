@@ -3,11 +3,13 @@ import { connect } from "react-redux";
 import '../App.css';
 import { setAuthedUser } from "../actions/authedUser";
 import { useNavigate } from "react-router-dom";
-// import history from "../history";
+import { useLocation } from "react-router-dom";
+
 
 const Login = (props) => {
     // console.log("props",props);
     const navigate = useNavigate();
+    const location = useLocation();
     const { dispatch } = props;
 
     const [user,setUser] = useState('');
@@ -21,11 +23,12 @@ const Login = (props) => {
 
         if (user) {
             dispatch(setAuthedUser(user))
-            // if (history.location.pathname !== '') {
-            //     navigate(history.location.pathname);
+            console.log("location",location)
+            // if (location.pathname !== '') {
+            //     navigate(location.pathname);
             // } else {
-            //     navigate('/');
-            // }
+                navigate('/');
+            // }    
         }
     }
     
