@@ -27,6 +27,12 @@ button {
   width: 100%;
 }
 
+button:disabled {
+	opacity: 0.4;
+	pointer-events: none;
+	cursor: default;
+}
+
 button:hover {
   opacity: 0.8;
 }
