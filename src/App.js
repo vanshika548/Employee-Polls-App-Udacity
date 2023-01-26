@@ -42,8 +42,8 @@ const App = (props) => {
                 <Route exact path="question/:id" element={<QuestionForm/>}/>
                 <Route exact path="question/:id/result" element={<QuestionResult/>}/>
                 <Route exact path="/leaderboard" element={<Leaderboard/>}/>
-                <Route path="*" element={<PageNotFound />} />
             </Route>
+                <Route path="*" element={<PageNotFound />} />
           </Routes>
           }
         </div>
