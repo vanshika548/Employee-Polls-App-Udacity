@@ -1,9 +1,22 @@
 import { connect } from "react-redux";
 import { useParams } from "react-router-dom";
+import PageNotFound from "./PageNotFound";
+import { useEffect,useState } from "react";
 
 const QuestionResult = (props) => {
 
     let {id} = useParams();
+    const [continueRendering, setContinueRendering] = useState(false);
+
+    useEffect(() => {
+        if (props.questions[id]) {
+            setContinueRendering(true)
+        }
+    }, [])
+
+    if (!continueRendering) {
+        return <PageNotFound />
+    }
 
     const resultObj = {
         avatar : props.users[props.questions[id].author].avatarURL,

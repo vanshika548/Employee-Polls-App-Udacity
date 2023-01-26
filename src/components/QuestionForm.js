@@ -3,12 +3,25 @@ import { useParams } from "react-router-dom";
 import { handleAddAnswer } from "../actions/questions";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import PageNotFound from "./PageNotFound";
 
 const QuestionForm = (props) => {
     let {id} =useParams();
     const navigate = useNavigate();
 
     const [optionSelected, setOptionselected] = useState('');
+    const [continueRendering, setContinueRendering] = useState(false);
+
+    useEffect(() => {
+        if (props.questions[id]) {
+            setContinueRendering(true)
+        }
+    }, [])
+
+    if (!continueRendering) {
+        return <PageNotFound />
+    }
 
     const questionObj = {
         authorId : props.questions[id].author,
