@@ -13,11 +13,11 @@ const DashboardPanel = (props) => {
     }
     return (
         <div>
-            <div>
-                <h1>
+            <div className="heading-flex">
+                <h1 className="answered-heading">
                     {questionTab === 'answered' ? 'Answered Questions' : 'Unanswered Questions'}
                 </h1>
-                <button onClick={(e) => handleQuestionTab(e)}>
+                <button className="tab" onClick={(e) => handleQuestionTab(e)}>
                     {questionTab === 'answered' ? 'Show Unanswered Questions' : 'Show Answered Questions'}
                 </button>
             </div>

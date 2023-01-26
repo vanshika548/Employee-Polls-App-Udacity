@@ -31,17 +31,21 @@ const QuestionForm = (props) => {
 
     return (
         <div>
-            <h1>QuestionForm</h1>
-            <img src={questionObj.avatar}/>
-            <div>
-                <h3>{props.authedUser} asks would you rather...</h3>
+            <h1 className="questiionResult">QuestionForm</h1>
+            <div className="ques-res">
+            <img src={questionObj.avatar} className='image'/>
+                <h3 className="heading-h3">{props.authedUser} asks would you rather...</h3>
+                <div className="heading-h3">
                 <div>
                     <label>{questionObj.optionOne.text}</label> 
                     <input onChange={handleSelectedValue} selectedvalue={optionSelected} type='radio' value='optionOne'/>
+                </div>
+                <div>
                     <label>{questionObj.optionTwo.text}</label>
                     <input onChange={handleSelectedValue} selectedvalue={optionSelected} type='radio' value='optionTwo'/>
                 </div>
-                <button type="submit" disabled={optionSelected === ''} onClick={(e) => handleSubmit(e)}>Submit</button>
+                </div>
+                <button type="submit" disabled={optionSelected === ''} onClick={(e) => handleSubmit(e)} className="submitbtn">Submit</button>
             </div>
         </div>
     )

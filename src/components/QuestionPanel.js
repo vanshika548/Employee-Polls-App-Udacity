@@ -26,16 +26,18 @@ const QuestionPanel = (props) => {
     }
     
     return (
-        <li>
-        <img src={avatar}/>
-        <div>
-            <span>{name} asks would you rather...</span>
-            <span>{formatDate(timestamp)}</span>
+        <li className='d-row'>
+        <img src={avatar} className="image"/>
+        <div className='question-panel-info'>
+            <div className='d-flex'>
+                <span><strong>{name}</strong> asks would you rather...</span>
+                <span className='date'>{formatDate(timestamp)}</span>
+            </div>
             <p>{optionOne && optionOne.text}</p>
-            <span>OR</span>
+            <span><strong>OR</strong></span>
             <p>{optionTwo && optionTwo.text}</p>
         </div>
-        <button onClick={onPoll}>Poll</button>
+        <button className='pollBtn' onClick={onPoll}>Poll</button>
         </li>
     )
 }

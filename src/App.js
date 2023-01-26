@@ -12,9 +12,9 @@ import QuestionForm from "./components/QuestionForm";
 import QuestionResult from "./components/QuestionResult";
 import Nav from "./components/Nav";
 import Leaderboard from "./components/Leaderboard";
+import PagenotFound from "./components/PageNotFound"; 
 
 const App = (props) => {
-  // console.log("app",props)
   useEffect(() => {
       props.dispatch(handleInitialData());
   }, [])
@@ -28,9 +28,11 @@ const App = (props) => {
   return (
     <div>
       <Fragment>
-        <div className="container">
           <LoadingBar/>
-          <Nav currentUser={props.authedUser} logout={logout}/>
+        <div className="container">
+          {
+            props.authedUser.length ? <Nav currentUser={props.authedUser} logout={logout}/> : null
+          }
           {props.loading ? null : 
           <Routes>
             <Route exact path="login" element={<Login/>}/>
@@ -40,6 +42,7 @@ const App = (props) => {
                 <Route exact path="question/:id" element={<QuestionForm/>}/>
                 <Route exact path="question/:id/result" element={<QuestionResult/>}/>
                 <Route exact path="/leaderboard" element={<Leaderboard/>}/>
+                <Route path="*" element={<PagenotFound />} />
             </Route>
           </Routes>
           }

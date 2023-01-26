@@ -1,6 +1,9 @@
-form {border: 3px solid #f1f1f1;
+
+form {
+border: 3px solid black;
 width: 40%;
 margin-left: 30%;
+height: 250px;
 }
 
 .heading{
@@ -9,12 +12,14 @@ margin-left: 30%;
 }
 
 select {
-  width: 100%;
+  width: 80%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  margin-left: 50px;
+  margin-top: 80px;
 }
 
 button {
@@ -54,13 +59,203 @@ img.avatar {
   border-radius: 50%;
 }
 
-.container {
-  padding: 16px;
+.disply-flex{
+  display: flex;
+  background-color: #61dafb;
+}
+
+.link-div{
+  padding-top: 10px;
+}
+
+.d-flex{
+  display: flex;
+  flex-direction: column;
+}
+
+.heading-flex{
+  display: flex;
+}
+
+.date{
+  color: grey;
+  font-size: 14px;
+}
+
+.tab{
+  color: black;
+  width: 200px;
+  height: 30px;
+  margin-top: 30px;
+  margin-left: 100px;
+  background-color: white;
+  text-decoration: underline;
+}
+
+.answered-heading{
+  margin-left: 350px;
+}
+
+.image{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.d-row{
+  display: flex;
+  flex-direction: row;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 700px;
+  margin-left: 300px;
+}
+
+.pollBtn{
+  width: 70px;
+  height: 40px;
+  margin-top: 120px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.question-panel-info{
+  margin-left: 40px;
+}
+
+.welcome-text{
+  margin-left: 35%;
+  margin-right: 15%;
+  padding-top: 10px;
+}
+
+.logout-btn{
+  color: black;
+  font-size: 12px;
+  margin: 0;
+  background-color: #61dafb;
+}
+
+.link {
+	background: none;
+	border: none;
+	text-decoration: underline;
+	cursor: pointer;
+	margin-left: 20px;
+	color: #595555;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.link.active {
+	color: #3d3b3b;
+	font-weight: 900;
 }
 
 span.psw {
   float: right;
   padding-top: 16px;
+}
+
+.new-ques-form{
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 550px;
+  margin-left: 350px;
+  height: 250px;
+}
+
+.new-ques-heading{
+  margin-left: 400px;
+  margin-top: 100px;
+}
+
+.inner-heading{
+  margin-left: 50px;
+}
+
+.input-fiels{
+  display: flex;
+  flex-direction: column;
+}
+
+.input{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  height: 30px;
+}
+
+.add-question{
+  width: 150px;
+  margin-left: 35%;
+}
+
+.leaderboard{
+  margin-left: 43%;
+}
+
+.user{
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 400px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.user-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 150px;
+}
+
+.data{
+  margin-left: 20px;
+}
+
+.user-info{
+  display: flex;
+  flex-direction: column;
+}
+
+.ques-res{
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 450px;
+  height: 300px;
+  margin-left: 34%;
+}
+
+.result{
+  display: flex;
+  flex-direction: row;
+}
+
+.author{
+  margin-top: 60px;
+  margin-left: 20px;
+}
+
+.result-info{
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.questiionResult{
+  margin-left: 535px;
+}
+
+.heading-h3{
+  margin-left: 20px;
+}
+
+.submitbtn{
+  width: 100px;
+  margin-left: 40%;
+  margin-top: 30px;
 }
 
 /* Change styles for span and cancel button on extra small screens */

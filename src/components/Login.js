@@ -3,13 +3,10 @@ import { connect } from "react-redux";
 import '../App.css';
 import { setAuthedUser } from "../actions/authedUser";
 import { useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 
 
 const Login = (props) => {
-    // console.log("props",props);
     const navigate = useNavigate();
-    const location = useLocation();
     const { dispatch } = props;
 
     const [user,setUser] = useState('');
@@ -22,13 +19,8 @@ const Login = (props) => {
         e.preventDefault();
 
         if (user) {
-            dispatch(setAuthedUser(user))
-            console.log("location",location)
-            // if (location.pathname !== '') {
-            //     navigate(location.pathname);
-            // } else {
-                navigate('/');
-            // }    
+            dispatch(setAuthedUser(user));
+            navigate('/');
         }
     }
     

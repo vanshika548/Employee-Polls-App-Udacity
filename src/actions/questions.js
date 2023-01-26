@@ -1,13 +1,3 @@
-// export const GET_QUESTIONS = 'GET_QUESTIONS';
-
-// export function getQuestions (questions){
-//     return{
-//         type : GET_QUESTIONS,
-//         questions
-//     }
-// }
-
-
 import { showLoading, hideLoading } from "react-redux-loading-bar";
 import { _saveQuestion, _saveQuestionAnswer } from "../utils/_DATA";
 import { addQuestionToUser, addAnswerToUser } from "./users";

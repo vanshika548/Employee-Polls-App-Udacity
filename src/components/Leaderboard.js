@@ -27,8 +27,8 @@ const Leaderboard = (props) => {
 
     return (
         <div>
-            <h1>Leaderboard</h1>
-            <ul>
+            <h1 className="leaderboard">Leaderboard</h1>
+            <ul className="user-list">
                 {
                     usersData(props.users).map((user) => (
                         <User key={user.id} user={user}/>

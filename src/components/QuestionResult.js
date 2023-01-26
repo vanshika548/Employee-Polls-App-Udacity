@@ -15,15 +15,15 @@ const QuestionResult = (props) => {
         totalVotes : props.questions[id].optionOne.votes.length + props.questions[id].optionTwo.votes.length
 
     }
-    console.log("props result",props)
     return (
         <div>
-            <h1>QuestionResult</h1>
-            <img src={resultObj.avatar}/>
-            <div>
-                <h2>Polling Result</h2>
-                <h4>{resultObj.authorName} asked...</h4>
-                <div>
+            <h1 className="questiionResult">QuestionResult</h1>
+            <div className="ques-res">
+            <div className="result">
+                <img src={resultObj.avatar} className='image'/>
+                <h4 className="author">{resultObj.authorName} asked...</h4>
+            </div>
+                <div className="result-info">
                     <div><label>Would You Rather?</label></div>
                     <div>
                         <label>{resultObj.optionOne.votes.length} <strong>employees voted for:</strong></label>
