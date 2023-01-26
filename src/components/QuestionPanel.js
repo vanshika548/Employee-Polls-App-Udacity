@@ -3,7 +3,6 @@ import { formatQuestion, formatDate } from '../utils/helpers';
 import { useNavigate } from 'react-router-dom';
 
 const QuestionPanel = (props) => {
-    // console.log("props qpanel",props)
     const navigate = useNavigate();
 
     const {avatar , name,timestamp,optionOne,optionTwo,hasReplied,id} = props.question;

@@ -5,7 +5,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const QuestionForm = (props) => {
-    console.log("pros form",props);
     let {id} =useParams();
     const navigate = useNavigate();
 

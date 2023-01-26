@@ -3,8 +3,7 @@ import { connect } from "react-redux";
 import QuestionPanel from "./QuestionPanel";
 
 const DashboardPanel = (props) => {
-    const [questionTab,setQuestionTab] = useState('unanswered')
-    // console.log("props questions",props);
+    const [questionTab,setQuestionTab] = useState('unanswered');
 
     const handleQuestionTab = (e) => {
         e.preventDefault();

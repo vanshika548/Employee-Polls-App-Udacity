@@ -1,5 +1,4 @@
 const User = (props) => {
-    console.log("users",props.user)
     return (
         <div className="user">
             <img src={props.user.avatar} className='image'/>
