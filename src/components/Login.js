@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { connect } from "react-redux";
 import '../App.css';
 import { setAuthedUser } from "../actions/authedUser";
@@ -6,6 +6,13 @@ import { useNavigate } from "react-router-dom";
 import history from "../history";
 
 const Login = (props) => {
+
+    useEffect(() => {
+        if (props.authedUser !== '') {
+            navigate('/')
+        }
+    })
+
     const navigate = useNavigate();
     const { dispatch } = props;
 
