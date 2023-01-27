@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import '../App.css';
 import { setAuthedUser } from "../actions/authedUser";
 import { useNavigate } from "react-router-dom";
-
+import history from "../history";
 
 const Login = (props) => {
     const navigate = useNavigate();
@@ -19,8 +19,13 @@ const Login = (props) => {
         e.preventDefault();
 
         if (user) {
+            debugger
             dispatch(setAuthedUser(user));
-            navigate('/');
+            if (history.location.pathname !== '') {
+                navigate(history.location.pathname);
+            } else {
+                navigate('/');
+            }
         }
     }
     
