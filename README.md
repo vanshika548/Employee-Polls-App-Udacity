@@ -1,4 +1,4 @@
-### `steps to run`
+### `Steps to run`
 To run this project you simply need to clone project at you local and run npm i. Then run npm run start.
 
 ### `Description of employee poll app`
@@ -20,3 +20,6 @@ This project is about employee poll in which employee can login, can see the pol
 
 ### `Workflow`
 The project starts with a login page, After successful login employee has multiple options, he can see the leaderboard, can raise new poll , can see the other polls created and can logout. After login on dashboard you will see the answered and unanswered questions. You can toggle within them. If you entering ang wrong url, you will be redirected to page not found.
+
+### `Unit Testing`
+Run npm test 
