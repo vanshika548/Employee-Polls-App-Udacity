@@ -9,9 +9,9 @@ const QuestionPanel = (props) => {
 
     const onPoll = () => {
         if(hasReplied){
-            navigate(`question/${id}/result`);
+            navigate(`questions/${id}/result`);
         }else{
-            navigate(`question/${id}`)
+            navigate(`questions/${id}`)
         }
     }
 

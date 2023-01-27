@@ -21,7 +21,7 @@ const DashboardPanel = (props) => {
                 </button>
             </div>
             <ul>
-                {Object.keys(props.questions).map((id) => (
+                {props.questionIds.map((id) => (
                     <QuestionPanel key={id} id={id} questionTab={questionTab}/>
                 ))}
             </ul>
@@ -30,7 +30,9 @@ const DashboardPanel = (props) => {
 }
 
 const mapStateToProps = ({questions}) => ({
-    questions
+    questionIds: Object.keys(questions).sort(
+        (a, b) => questions[b].timestamp - questions[a].timestamp
+    ),
 })
 
 export default connect(mapStateToProps)(DashboardPanel);
