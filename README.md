@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+###Steps to run
+To run this project you simply need to clone project at you local and run npm i. Then run npm run start.
+
+###About
+This project is about employee poll in which employee can login, can see the polls raised by other employess, create their own polls and can check the number of people voted for their poll. The employee can logout. 
+
+###Workflow
+The project starts with a login page, After successful login employee has multiple options, he can see the leaderboard, can raise new poll , can see the other polls created and can logout. After login on dashboard you will see the answered and unanswered questions. You can toggle within them. If you entering ang wrong url, you will be redirected to page not found.
