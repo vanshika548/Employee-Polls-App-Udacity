@@ -226,7 +226,7 @@ span.psw {
   border: 2px solid black;
   border-radius: 10px;
   width: 450px;
-  height: 300px;
+  height: 400px;
   margin-left: 34%;
 }
 
@@ -257,6 +257,16 @@ span.psw {
   width: 100px;
   margin-left: 40%;
   margin-top: 30px;
+}
+
+.your-vote{
+  color: grey;
+}
+
+.poll-result{
+  border: 2px black solid;
+  margin-right: 20px;
+  margin-top: 20px;
 }
 
 /* Change styles for span and cancel button on extra small screens */

@@ -18,6 +18,13 @@ const QuestionResult = (props) => {
         return <PageNotFound />
     }
 
+    const calculatePercentage = (count, totalCount) => {
+        if (totalCount !== 0) {
+            return Math.round((count / totalCount) * 100);
+        }
+        return 'NA';
+    }
+
     const resultObj = {
         avatar : props.users[props.questions[id].author].avatarURL,
         optionOne : props.questions[id].optionOne,
@@ -38,13 +45,21 @@ const QuestionResult = (props) => {
             </div>
                 <div className="result-info">
                     <div><label>Would You Rather?</label></div>
-                    <div>
-                        <label>{resultObj.optionOne.votes.length} <strong>employees voted for:</strong></label>
-                        <label>{resultObj.optionOne.text}</label>
+                    <div className="poll-result">
+                        <label><strong>{resultObj.optionOne.votes.length} {`(`}{calculatePercentage(resultObj.optionOne.votes.length, resultObj.totalVotes)}{`%)`} </strong> employees voted for:</label>
+                        <label><strong>{resultObj.optionOne.text}</strong></label>
+                        <br/>
+                        {resultObj.myVote === 'optionOne' ?
+                            <strong className="your-vote">***YOUR VOTE***</strong> : null
+                        }
                     </div>
-                    <div>
-                        <label>{resultObj.optionTwo.votes.length} <strong>employees voted for:</strong></label>
-                        <label>{resultObj.optionTwo.text}</label>
+                    <div className="poll-result">
+                        <label><strong>{resultObj.optionTwo.votes.length} {`(`}{calculatePercentage(resultObj.optionTwo.votes.length, resultObj.totalVotes)}{`%)`} </strong> employees voted for:</label>
+                        <label><strong>{resultObj.optionTwo.text}</strong></label>
+                        <br/>
+                        {resultObj.myVote === 'optionTwo' ?
+                            <strong className="your-vote">***YOUR VOTE***</strong> : null
+                        }
                     </div>
                 </div>
             </div>
