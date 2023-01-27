@@ -1,5 +1,6 @@
 ### `Steps to run`
-To run this project you simply need to clone project at you local and run npm i. Then run npm run start.
+*To run this project you simply need to clone project at you local and run npm i. 
+*Then run npm run start.
 
 ### `Description of employee poll app`
 *This project consists of employee polling functionality. 
