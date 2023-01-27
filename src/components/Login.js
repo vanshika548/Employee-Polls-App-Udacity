@@ -19,7 +19,6 @@ const Login = (props) => {
         e.preventDefault();
 
         if (user) {
-            debugger
             dispatch(setAuthedUser(user));
             if (history.location.pathname !== '') {
                 navigate(history.location.pathname);
